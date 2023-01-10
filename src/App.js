@@ -10,7 +10,11 @@ function App() {
   );
 
   useEffect(() => {
-    getSelectedUsers([1, 2, 3, 4]).then((data) => setUsers(data));
+    try {
+      getSelectedUsers([1, 2, 3, 4]).then((data) => setUsers(data));
+    } catch (err) {
+      console.log(err);
+    }
   }, []);
 
   return (
