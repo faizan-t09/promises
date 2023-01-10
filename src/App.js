@@ -1,6 +1,6 @@
-import "./App.css"
+import "./App.css";
 import { useEffect, useState } from "react";
-import { getAllUsers, getUserById, getSelectedUsers } from "./modules/myhelper";
+import { getSelectedUsers } from "./modules/myhelper";
 import { Card } from "./modules/Card";
 let userIdList = [1, 2, 3, 4];
 
@@ -10,7 +10,6 @@ function App() {
   );
 
   useEffect(() => {
-    // getUserById(1).then((data) => setUsers(data));
     getSelectedUsers([1, 2, 3, 4]).then((data) => setUsers(data));
   }, []);
 
@@ -18,9 +17,13 @@ function App() {
     <div>
       <div className="card-container">
         {users.map((user) => {
-
-            return typeof(user) === "string" ? <div className="card-internal-container" key={Math.random()}><div className="loading">Loading...</div></div> : <Card key={user.id} data={user} />
-    
+          return typeof user === "string" ? (
+            <div className="card-internal-container" key={Math.random()}>
+              <div className="loading">Loading...</div>
+            </div>
+          ) : (
+            <Card key={user.id} data={user} />
+          );
         })}
       </div>
     </div>
