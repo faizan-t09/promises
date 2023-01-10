@@ -28,12 +28,9 @@ export const getSelectedUsers = async (arr) => {
 
   return Promise.all(promiseArray)
     .then((res) => {
-      console.log("typeof Promise.all : "+typeof res);
-      console.log(res);
       return res;
     })
     .catch((err) => {
-      console.log(err);
       return err;
     });
 };

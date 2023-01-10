@@ -1,51 +1,18 @@
-.card{
-    border: solid 1px;
-    min-width: 200px;
-    height: 280px;
+.card-internal-container{
+    border: solid 3px rgb(253, 239, 239);
+    width: 400px;
+    height: 250px;
     border-radius: 5px;
-    margin:10px;
-    background-color: #4fa5d8;
-    cursor:zoom-in
-}
-
-img{
-    margin:5px;
+    margin:20px;
     padding: 0;
-    width:auto;
-    height:150px;
-    width:120px
-}
-
-
-h1{
-    padding:2px;
-    margin:0;
-    /* border-top: solid 1px; */
-    /* border-bottom: solid 1px; */
-}
-
-p{
-    padding:5;
-    margin:0;
-    
-}
-
-.delete-icon{
-    position: relative;
-    bottom: 135px;
-    left:150px;
-    cursor: pointer;
-}
-
-.actions{
-    padding :10px;
-    /* border-top: solid 1px; */
+    background-color: #4fa5d8;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-around;
+    box-shadow: #72b1d5 5px 20px 50px;
 }
 
-.actions button{
-    border-radius: 3px;
-    cursor: pointer;
+.loading{
+    font-size: 50px;
+    padding-top: 70px;
 }
